@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+</head>
+<body>
+  <h1>Calculator</h1>
+
+  <input type="text" class="inp" readonly>
+
+  <div class="btn">
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button>
+    <button>5</button>
+    <button>6</button>
+    <button>7</button>
+    <button>8</button>
+    <button>9</button>
+    <button>0</button>
+    <button>-</button>
+    <button>+</button>
+    <button>/</button>
+    <button>*</button>
+    <button class="clear">C</button>
+    <button class="equal">=</button>
+  </div>
+
+  <script>
+    let btns = document.querySelectorAll('button')
+    let inp = document.querySelector('.inp')
+    inp.value = ''
+
+    // btns.forEach((btn) => {
+    //   btn.addEventListener('click', (e) => {
+    //     let value = e.target.innerText
+
+    //     if (value === '=') {
+    //       try {
+    //         inp.value = eval(inp.value) // evaluate the math
+    //       } catch {
+    //         inp.value = 'Error'
+    //       }
+    //     } else if (value === 'C') {
+    //       inp.value = '' // clear input
+    //     } else {
+    //       inp.value += value // add button text to input
+    //     }
+    //   })
+    // })
+
+    btns.forEach((btn)=>{
+      btn.addEventListener('click',(e)=>{
+        let value=e.target.innerText
+        if (value==='='){
+          try{input.value=eval(inp.value)}
+          catch(err){
+            input.value=('err')
+          }
+          else if(value==='C'){
+            inp.value=''
+          }
+          else{
+            inp.value+=value
+          }
+        }
+      })
+    })
+  </script>
+</body>
+</html>
+/
